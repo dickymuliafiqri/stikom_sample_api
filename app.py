@@ -25,9 +25,9 @@ def root():
             }
         })
     elif request.method == "POST":
-        user_form = request.form
-        user_id = user_form.get("id")
-        user_pass = user_form.get("pass")
+        user_form = request.json or request.form
+        user_id = user_form["id"] or user_form.get("id")
+        user_pass = user_form["pass"] or user_form.get("pass")
         user = None
 
         if user_id == None or user_pass == None:
@@ -39,7 +39,7 @@ def root():
         db = json.load(open("./db/db.json"))
 
         try:
-            user = db[user_id]
+            user = db[str(user_id)]
         except KeyError:
             return jsonify({
                 "error": True,
