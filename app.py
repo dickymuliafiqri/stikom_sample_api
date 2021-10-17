@@ -11,7 +11,18 @@ def root():
     if request.method == "GET":
         return jsonify({
             "success": True,
-            "status": "ok"
+            "message": "Welcome!",
+            "endpoint": {
+                "/": {
+                    "POST": {
+                        "form": {
+                            "id": "user id",
+                            "pass": "user password"
+                        }
+                    },
+                    "GET": "This page"
+                }
+            }
         })
     elif request.method == "POST":
         user_form = request.form
@@ -42,6 +53,12 @@ def root():
             })
 
         return jsonify(user)
+
+    else:
+        return jsonify({
+            "error": True,
+            "message": "only post and get method allowed!"
+        })
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=port, debug=False)
