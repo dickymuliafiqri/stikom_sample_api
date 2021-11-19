@@ -4,21 +4,21 @@
     "pass": "stikom",
     "prodi": "D3 Manajemen Informatika",
     "hobi": "Listening to music",
-    "credit": "Rp. 7.000.000.000"
+    "admin": true
   },
   "3121101184": {
     "nama": "Damara Laedy Meilanda",
     "pass": "stikom",
     "prodi": "S1 Manajemen Informatika",
     "hobi": "Make over",
-    "credit": "Rp. 5.000.000.000"
+    "admin": false
   },
   "3121101185": {
     "nama": "Dewi Alfina",
     "pass": "stikom",
     "prodi": "D3 Manajemen Informatika",
     "hobi": "Sell and buy",
-    "credit": "Rp. 10.000.000.000"
+    "admin": false
   },
   "Info": "UTS akan dilaksanakan serempak pada tanggal 03 September 2002"
 }
